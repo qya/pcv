@@ -133,3 +133,16 @@ Start the Vite development server to test the player interface:
 npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser to play `.pcv` files, configure rendering pipelines, toggle shaders, and view the diagnostic logger.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Contact
+
+If you have any questions, issues, or suggestions, please create an issue on GitHub or contact us through our repository.
+
+---
+## License
+
+MIT - see [LICENSE](LICENSE).
