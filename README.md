@@ -2,7 +2,7 @@
 
 A complete proof-of-concept custom video platform that encodes ordinary videos into a custom particle-based binary format (`.pcv`) and streams/renders them entirely via GPU point primitives (**WebGL2** & **WebGPU**). No native video elements, no browser media codecs, and no MediaSource API are used for playback.
 
-![PointCloudPlayer Showcase](demo/showcase.png) *(Placeholder or screenshot target for UI)*
+![PointCloudPlayer Showcase](public/screenshot.png)
 
 ---
 
