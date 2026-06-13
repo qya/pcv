@@ -8,6 +8,7 @@ import type {
 } from "../converter/browserPcvConverter";
 import { PointCloudPlayer, type PlayerStats } from "../player/PointCloudPlayer";
 import { PlayerControls } from "./PlayerControls";
+import { AppLogo } from "./AppLogo";
 
 type Quality = "auto" | "160p" | "320p" | "720p" | "1080p" | "custom";
 type SizeMode = "small" | "balanced" | "best";
@@ -130,17 +131,6 @@ export function ConverterPage() {
     playerRef.current?.destroy();
     playerRef.current = null;
     if (resultRef.current) URL.revokeObjectURL(resultRef.current.url);
-    
-    // Clear canvas WebGL context
-    try {
-      const gl = canvasRef.current.getContext("webgl2");
-      if (gl) {
-        gl.clearColor(0.0, 0.0, 0.0, 1.0);
-        gl.clear(gl.COLOR_BUFFER_BIT);
-      }
-    } catch (e) {
-      console.warn("Failed to clear WebGL context", e);
-    }
 
     try {
       setProgress({
@@ -212,7 +202,7 @@ export function ConverterPage() {
         <header className="flex flex-col gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between w-full">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <AppLogo size={36} className="rounded-lg shadow-lg shadow-emerald-500/10" />
               <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
                 Point Cloud Video Converter Suite
               </h1>

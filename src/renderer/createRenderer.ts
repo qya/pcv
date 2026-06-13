@@ -8,8 +8,9 @@ export async function createRenderer(canvas: HTMLCanvasElement): Promise<PointRe
       const adapter = await navigator.gpu.requestAdapter();
       if (adapter) {
         const device = await adapter.requestDevice();
+        const renderer = new WebGPUPointRenderer(canvas, device, adapter);
         console.log("Successfully initialized WebGPU renderer!");
-        return new WebGPUPointRenderer(canvas, device, adapter);
+        return renderer;
       }
     } catch (e) {
       console.warn("Failed to initialize WebGPU renderer, falling back to WebGL2:", e);

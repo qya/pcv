@@ -171,7 +171,7 @@ export async function localConvertVideoToPcv(
 
     if (useTextureCodec) {
       try {
-        await initWasm(customWasmUrl || wasmUrl);
+        await initWasm({ module_or_path: customWasmUrl || wasmUrl });
         wasmEncoder = new WasmTextureEncoder(
           outputSize.width,
           outputSize.height,
@@ -290,7 +290,7 @@ export async function localConvertVideoToPcv(
     let compressedData: Uint8Array;
     try {
       // Ensure WASM is initialized (may already be from encoder)
-      try { await initWasm(customWasmUrl || wasmUrl); } catch {}
+      try { await initWasm({ module_or_path: customWasmUrl || wasmUrl }); } catch {}
       compressedData = zstd_compress(rawBuffer, compressionLevel);
       debug("pcv:compressed_zstd", { compressedBytes: compressedData.byteLength, rawBytes: totalRawBytes });
     } catch (err) {

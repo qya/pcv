@@ -1,8 +1,10 @@
-# 🌌 Point Cloud Video (PCV) Player & Platform
+<p align="center">
+  <img src="public/android-chrome-192x192.png" alt="Point Cloud Video logo" width="96" />
+</p>
+
+# Point Cloud Video (PCV) Player & Platform
 
 A complete proof-of-concept custom video platform that encodes ordinary videos into a custom particle-based binary format (`.pcv`) and streams/renders them entirely via GPU point primitives (**WebGL2** & **WebGPU**). No native video elements, no browser media codecs, and no MediaSource API are used for playback.
-
-![PointCloudPlayer Showcase](public/screenshot.png)
 
 ---
 

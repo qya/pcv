@@ -1,0 +1,19 @@
+{
+    "name": "Point Cloud Video",
+    "short_name": "PCV",
+    "icons": [
+       {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+       },
+       {
+          "src": "/apple-touch-icon.png",
+          "sizes": "180x180",
+          "type": "image/png"
+       }
+    ],
+    "theme_color": "#080b10",
+    "background_color": "#080b10",
+    "display": "standalone"
+ }

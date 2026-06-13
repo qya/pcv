@@ -4,6 +4,7 @@ import { PointCloudPlayer, type PlayerStats } from "../player/PointCloudPlayer";
 import type { RenderMode } from "../renderer/WebGLPointRenderer";
 import { createSamplePCVUrl } from "./createSamplePCV";
 import { PlayerControls } from "./PlayerControls";
+import { AppLogo } from "./AppLogo";
 
 const initialStats: PlayerStats = {
   loadedFrames: 0,
@@ -174,7 +175,7 @@ export function App() {
         <header className="flex flex-col gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <AppLogo size={36} className="rounded-lg shadow-lg shadow-cyan-500/10" />
               <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
                 Point Cloud Video Playground
               </h1>
@@ -185,7 +186,7 @@ export function App() {
           </div>
           <div className="flex items-center gap-6">
             <Link className="text-xs font-semibold uppercase tracking-widest text-cyan-400 hover:text-cyan-300 hover:underline transition-all" to="/converter">
-              Browser Converter Suite →
+              Converter →
             </Link>
           </div>
         </header>

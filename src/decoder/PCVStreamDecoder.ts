@@ -101,7 +101,7 @@ export class PCVStreamDecoder {
     let decompressedData: Uint8Array;
     if (isZstd) {
       try {
-        await initWasm(wasmUrl);
+        await initWasm({ module_or_path: wasmUrl });
       } catch (err) {
         // WASM may already be initialized
       }
